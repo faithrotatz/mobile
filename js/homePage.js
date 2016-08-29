@@ -8,7 +8,7 @@ var h=document.documentElement.clientHeight+'px';
            $('.bodyshade').remove();
           $(' <div class="bodyshade"></div>').appendTo($('body'))
            $('.'+$(this).attr('data')).show();
-           $('.'+$(this).attr('data')).find('li').removeClass('checkli')
+         
     })
     $('.checkArea3 li').click(function(){
         $('.checkArea3 li').removeClass('checkli')//位置单选
