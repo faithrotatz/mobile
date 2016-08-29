@@ -1,0 +1,364 @@
+.container{
+  width:320px;
+  padding:0;
+}
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+.header{
+
+  border-bottom:10px solid #f6f6f6;
+}
+.container-fluid{
+  padding:0;
+}
+.topnav{
+  width:100%;
+  height:100px;
+}
+.bannerlogo{
+  width:320px;
+  height:60px;
+  margin:0 auto;
+  background-image: url(../img/img_03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:160px;
+}
+.mainbanner{
+  margin-top:100px;
+  width:927px;
+  height:155px;
+  background-image:url(../images/slogan.png);
+}
+.topnav ul li{
+  font-size: 15px;
+  color:#423f50;
+  float:right;
+  margin-right:30px;
+
+}
+.topnav ul li:last-child{
+  background-image: url(../images/phone.png);
+  background-repeat: no-repeat;
+  padding-left:30px;
+  background-position:0px 3px;
+}
+.topnav ul li:first-child{
+  margin-right:0;
+}
+.topnav ul{
+  overflow:hidden;
+  float: right;
+  margin-top:40px;
+}
+.topnav img{
+  float:left;
+  margin-top:10px;
+}
+.bannershade{
+  height:60px;
+  width:100%;
+  border-bottom:1px solid #f6f6f6;
+
+}
+.mainnav li{
+  width:80px;
+  height:60px;
+  line-height:60px;
+  color:black;
+  float:left;
+  font-size:16px;
+  text-align:center;
+}
+.mainnav li:first-child{
+  border-bottom:3px solid #d73240;
+}
+.mainnav li:hover{
+    border-bottom:3px solid #d73240;
+    cursor:pointer;
+}
+
+.content ul li{
+  width:138px;
+  height:133px;
+
+  float:left;
+  text-align:center;
+
+
+}
+.content ul li:first-child div{
+   background-image:url(../img/iconbg1.png);
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size:75px;
+
+}
+.content ul li:nth-child(2) div{
+   background-image:url(../img/iconbg2.png);
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:75px;
+}
+.content ul li:nth-child(3) div{
+    background-image:url(../img/iconbg3.png);
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:75px;
+}
+.content ul li:nth-child(4) div{
+    background-image:url(../img/iconbg4.png);
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:75px;
+}
+.content ul li:nth-child(5) div{
+    background-image:url(../img/iconbg5.png);
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:75px;
+}
+.content ul li:nth-child(6) div{
+    background-image:url(../img/iconbg6.png);
+   background-repeat:no-repeat;
+   background-position:center;
+   background-size:75px;
+}
+.content ul li:nth-child(2n){
+  float: right;
+}
+.content ul li div{
+  width:75px;
+  height:75px;
+
+  margin:0 auto;
+  text-align:center;
+
+}
+.content{
+
+  padding:0;
+
+
+}
+.bannerbtn{
+  width:300px;
+  height:140px;
+  padding-top:20px;
+  margin:0 auto;
+}
+.bannerbtn li div{
+    width:58px;
+    height:58px;
+    background-color:#e25b48;
+    border-radius:50%;
+    margin:0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom:10px;
+}
+.bannerbtn li span{
+  font-size:16px;
+}
+.bannerbtn li:nth-child(1) div{
+  background-image: url(../img/indexbg1.png);
+    background-size:30px;
+
+}
+.bannerbtn li:nth-child(2) div{
+  background-image: url(../img/indexbg2.png);
+  background-size: 40px;
+}
+.bannerbtn li:nth-child(3) div{
+  background-image: url(../img/indexb3.png);
+  background-size: 30px;
+}
+.bannerbtn li{
+    float: left;
+    width:100px;
+    text-align:center;
+
+}
+.contentadv>div,.content>div{
+  width:320px;
+  height:100px;
+ padding-top:10px;
+  font-size:16px;
+  margin:0 auto;
+}
+.contentadv>div>mark,.content>div>mark{
+  font-size:22px;
+  color:#d73041;
+  background:none;
+  font-weight:500;
+  display:block;
+}
+.contentadv{
+
+  height:455px;
+  border-top:10px solid #f6f6f6;
+
+}
+.advantage{
+    height:875px;
+}
+.ad-content{
+  width:320px;
+  height:446px;
+
+  border-radius:10px;
+  margin:0 auto;
+
+}
+.ad-content ul{
+  float:left;
+  margin-top:10px;
+}
+.ad-content ul:last-child{
+  float: right;
+}
+.ad-content ul li{
+
+  width:100px;
+  /*height:20px;*/
+  text-align:center;
+  font-size:12px;
+
+}
+.ad-content ul:nth-child(3) li:nth-child(2),.ad-content ul:nth-child(1) li:nth-child(2){
+
+    font-size:10px;
+    color:#b7b7b7;
+    text-align:left;
+
+}
+
+
+
+.ad-content ul li:first-child,.ad-content ul li:last-child{
+  /*height:55px;
+  font-size:18px;*/
+
+}
+.progress1{
+  height:307px;
+  padding:0;
+  padding-left:10px;
+}
+.progress1 ul li{
+  width:320px;
+  margin-right:1px;
+  margin-bottom:6px;
+  overflow: hidden;
+}
+.progress1 ul li div:first-child{
+  width:50px;
+  height:50px;
+  background:white;
+  margin:0 auto;
+  background-repeat:no-repeat;
+  background-position: center;
+  border:1px dashed #d94555;
+  border-radius:2px;
+  margin-right:10px;
+
+
+}
+
+.progress1 ul li p{
+ width:245px;
+ height:30px;
+ line-height:30px;
+ font-size: 16px;
+ text-align:left;
+
+ margin: 0 auto;
+
+}
+.progress1 ul li span{
+  display:block;
+  word-break:break-all;
+   width:230px;
+   font-size:14px;
+   line-height:25px;
+
+    color:#666666;
+}
+.progress1 ul li div{
+  float:left;
+}
+.progress1 ul li:first-child div:first-child{
+background-image: url(../img/img_31.gif);
+}
+.progress1 ul li:nth-child(2) div:first-child{
+background-image: url(../img/img_37.gif);
+}
+.progress1 ul li:nth-child(3) div:first-child{
+background-image: url(../img/img_34.gif);
+}
+.progress1 ul li:nth-child(4) div:first-child{
+background-image: url(../img/img_40.gif);
+}
+
+footer{
+  height:140px;
+  background:#d73240;
+  padding-top:20px;
+}
+footer .container{
+   height:100%;
+}
+
+
+.footer p{
+  color:white;
+  font-size:16px;
+}
+.footer p:first-child {
+  margin-bottom:20px;
+}
+
+.footer ul li p:last-child{
+  font-size:12px;
+}
+/*data大数据*/
+.ad-content ul:nth-child(3),.ad-content ul:nth-child(1){
+  width:100px;
+  height:280px;
+
+  border-radius:4px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.6);
+
+}
+.ad-content ul:nth-child(3) li,.ad-content ul:nth-child(1) li{
+  width:100%;
+  background:#dfdfdf;
+  word-break: break-all;
+  min-height:20px;
+  line-height:20px;
+  padding:6px;
+}
+.ad-content ul:nth-child(3) li:nth-child(2n),.ad-content ul:nth-child(1) li:nth-child(2n){
+  width:100%;
+  background:white;
+  word-break: break-all;
+}
+.ad-content ul:nth-child(2){
+  width:120px;
+  background:#d73240;
+  height:300px;
+  border-radius:4px;
+  position: relative;
+  top:-10px;
+}
+.ad-content ul:nth-child(2) li{
+  width:100%;
+  text-align: center;
+  min-height:30px;
+   padding:6px;
+   color: white;
+}

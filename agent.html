@@ -1,0 +1,207 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>咱家铺子- 中国互联网商业大数据选址服务平台-商家选址，商铺出租，商铺转让，大数据选址就上咱家铺子！</title>
+    <!-- <meta name="description" content="咱家铺子是中国领先的互联网商业地产服务平台，拥有海量真实铺源，通过线上大数据精准匹配，线下一对一专业顾问服务，让商铺出租更省事，让商家选址更专业。商铺出租、商铺转让、大数据选址就上咱家铺子">
+    <meta name="keywords" content="深圳档口,免费找商铺，福田找商铺，南山找商铺，龙岗找商铺，宝安找商铺，档口招租,门面转让,餐饮门面转让,商铺转让,深圳商铺,深圳开店,生意转让,商铺租售,商铺出租,旺铺出租,深圳铺出租,门店出租信息,中原找铺,搜房网找铺,Q房网找铺,世联行找铺子"> -->
+    <link rel="shortcut icon" href="http://www.zanjiapuzi.com/images/logo.ico">
+    <link rel="Bookmark" href="http://www.zanjiapuzi.com/images/logo.ico">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://m.zanjiapuzi.com/css/agent.css">
+    <!-- <link rel="stylesheet" href="css/agent.css">  -->
+    <link rel="stylesheet" href="http://m.zanjiapuzi.com/css/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0b6b4d9c1c6125cd3d09621c4fb2bd35";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+<body style="height:100%">
+<header class='container-fluid header'>
+    <div class="container">
+        <div class="topnav">
+             <a href="http://m.zanjiapuzi.com"><span style="color:black"></span></a>
+             委托找铺
+        </div>
+
+          <div class='imgbg'></div>
+          <div class='customerphone'>客服电话：4008 733 800</div>
+        <div class="bannercontent">
+            
+            <!--http://192.168.1.128:8080/depute/saveDepute-->
+            <form  id="save" method="post" autocomplete="off">
+                <ul>
+                    <li><span>真实姓名</span><input type="text" name="realName" id="fullname"></li>
+                    <li><span>电话号码</span><input type="text" name="phoneNum" id="phone"></li>
+                    <li><span>店铺经营类型</span><input type="text" name="engageType" id="industry"></li>
+                    <li class='shoparea'><span>所需店铺面积</span><input type="text" id="needAreaMin" name="needAreaMin">m² &nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" id="needAreaMax" name="needAreaMax" style="padding-left:0px;">m²</li>
+                    <li class='checkarea' datatype="expectArea" data='checkArea2'><span>期望开店区域</span>
+                        <input type="text" id="addinput" class='addinput' value="" readonly="true" style='padding-right:30px;'>
+                        <input type="hidden" name="expectArea" id="expectArea"/>
+                        <input type="hidden" name="otherExpectArea" id="otherExpectArea"/>
+                    </li>
+                    <li><span>租金预算</span><input type="text" name="rentBudget" id="rentBudget"></li>
+                    <li><textarea name="other" id="other" cols="30" rows="10" maxlength="20" placeholder="请输入您的其他需求"></textarea></li>
+                    <li  style="height:0"><span></span><input type="hidden" name="advSource" id="advSource" value=""></li>
+                    <li  style="height:0"><span></span><input type="hidden" name="source" id="source" value="6"></li>
+                    <li><button type="button"  id="Search" onclick="query()">马上找铺</button></li>
+                </ul>
+                
+            </form>
+
+        </div>
+
+    </div>
+</header>
+<div class="checkArea1 checkArea2">
+<div class='areatip'>请选择期望的开店区域(可多选)</div>
+   <div>
+     <ul>
+     <li>宝安区</li>
+     <li>福田区</li>
+     <li>南山区</li>
+     <li>罗湖区</li>
+     <li>龙岗区</li>
+     <li>盐田区</li>
+     <li>龙华新区</li>
+     <li>光明新区</li>
+     <li>大鹏新区</li>
+      
+   </ul>
+    <div class='areatip areatip1'>
+     
+      <input type="text"placeholder="请输入您期望的其他开店区域"> 
+    
+     
+   </div>
+  </div>
+    <button class='canclebtn'>取消</button>
+     <button class='savebtn'>确定</button>
+ </div>
+</body>
+<!--<script src='http://cdn.bootcss.com/zepto/1.1.6/zepto.min.js'></script>-->
+<script src='http://www.zanjiapuzi.com/js/jquery-3.0.0.min.js'></script>
+<script src='http://m.zanjiapuzi.com/js/homePage.js'></script>
+
+<script type="text/javascript">
+
+    function query(){
+        var data1= document.getElementById('fullname').value;
+        var reg =   /(^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$)|(^((\(\d{3}\))|(\d{3}\-))?(1[34578]\d{9})$)/;
+        var data2 = document.getElementById("phone").value;
+        var data3 = document.getElementById("industry").value;
+        var data5 = document.getElementById("rentBudget").value;
+        var data6 = document.getElementById("other").value;
+
+        if(data1==""){
+            Funtip("姓名不能为空");
+            return;
+        }
+
+        if(data2==""){
+            Funtip('电话号码不能为空');
+            return;
+        }
+
+        if(!reg.test(data2)){
+            Funtip('电话号码格式不对');
+            return;
+        }
+
+        if(data3==""){
+            Funtip('店铺经营类型不能为空');
+            return;
+        }
+
+        var numberReg = /^\d*$/;
+        var needAreaMin = $("#needAreaMin").val();
+        var needAreaMinN = 0;
+        if($.trim(needAreaMin)){
+            if(!numberReg.test(needAreaMin)){
+                Funtip('店铺面积只能输入整数');
+                return;
+            }
+            needAreaMinN = parseInt(needAreaMin)
+        }
+
+        var needAreaMax = $("#needAreaMax").val();
+        var needAreaMaxN = 0;
+        if($.trim(needAreaMax)){
+            if(!numberReg.test(needAreaMax)){
+                Funtip('店铺面积只能输入整数');
+                return;
+            }
+            needAreaMaxN = parseInt(needAreaMax);
+        }
+
+        if(needAreaMinN <= 0 && needAreaMaxN <= 0){
+            Funtip('请输入一个店铺面积');
+            return;
+        }
+
+        var expectArea = $("#expectArea").val();
+        var otherExpectArea = $("#otherExpectArea").val();
+        if(!$.trim(expectArea) && !$.trim(otherExpectArea)){
+            Funtip('请选择开店区域');
+            return;
+        }
+
+        if(otherExpectArea.length > 30){
+            Funtip('开店区域不能多于30个字');
+            return;
+        }
+
+        if(data5==""){
+            Funtip('租金预算不能为空');
+            return;
+        }
+
+        if(data6==""){
+            Funtip('其它需求不能为空');
+            return;
+        }
+
+        var advSource = getQueryString("type");
+        if(advSource==""||advSource==null){
+            $("#advSource").val(7);
+        }else{
+            $("#advSource").val(advSource);
+        }
+
+        var param = encodeURI(encodeURI($("#save").serialize()));
+
+        $.ajax({
+            url:"http://zjpz-admin.zanjiapuzi.com/depute/saveDepute",
+            data: param,
+            processData: false,
+            dataType:"jsonp",
+            success:function(data){
+                alert(data.message);
+                if(data.code == 1){
+                    window.location.reload(); //刷新加载页面
+                }
+            },
+            error:function(){
+                alert("提交失败");
+            }
+        });
+    }
+
+    function getQueryString(key){
+        var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result?decodeURIComponent(result[2]):null;
+    }
+</script>

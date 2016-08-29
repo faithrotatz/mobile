@@ -1,0 +1,228 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>咱家铺子- 中国互联网商业大数据选址服务平台-商家选址，商铺出租，商铺转让，大数据选址就上咱家铺子！</title>
+
+    <link rel="shortcut icon" href="http://www.zanjiapuzi.com/images/logo.ico">
+    <link rel="Bookmark" href="http://www.zanjiapuzi.com/images/logo.ico">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://m.zanjiapuzi.com/css/mobile_shops_put.css">
+     <!-- <link rel="stylesheet" href="../css/agent.css"> -->
+    <link rel="stylesheet" href="http://m.zanjiapuzi.com/css/global.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?0b6b4d9c1c6125cd3d09621c4fb2bd35";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+
+</script>
+<body style="height:100%">
+<header class='container-fluid header'>
+    <div class="container">
+        <div class="topnav">
+             <a href="http://m.zanjiapuzi.com"><span style="color:black"></span></a>
+             投放铺源
+        </div>
+        <div class='imgbg'></div>
+        <div class='customerphone'>客服电话：4008 733 800</div>
+
+        <div class="bannercontent">
+             
+            <!--http://192.168.1.128:8080/depute/saveDepute-->
+            <form  id="save" method="post" autocomplete="off">
+                <ul>
+                    <li><span>业主姓名</span><input type="text" name="realName" id="fullname"></li>
+                    <li><span>电话号码</span><input type="text" name="phoneNum" id="phone"></li>
+                    <li><span>店铺面积</span><input type="text" name="reasonable" id="industry"></li>
+                    <li class='checkarea' datatype="shopsPosition" data='checkArea3'><span>店铺位置</span>
+                        <input type="text" value="" readonly="true" id='addinput' style='padding-right:30px;'>
+                        <input type="hidden" name="shopsPosition" id="shopsPosition">
+                        <input type="hidden" name="otherShopsPosition" id="otherShopsPosition">
+                    </li>
+                    <li class='checkarea' datatype="operateType" data='checkArea2'><span>希望经营类型</span>
+                        <input type="text" value="" readonly="true" style="padding-right:25px;" id='manage'>
+                        <input type="hidden" name="operateType" id="operateType">
+                        <input type="hidden" name="otherOperateType" id="otherOperateType">
+                    </li>
+                    <li><textarea name="otherNeeds" id="otherNeeds" cols="30" rows="10" maxlength="20" placeholder="请输入您的其他需求"></textarea></li>
+                    <li  style="height:0"><span></span><input type="hidden" name="source" id="source" value="6"></li>
+                    <li  style="height:0"><span></span><input type="hidden" name="advSource" id="advSource" value=""></li>
+                    <li><button type="button"  id="Search" onclick="query()">投放铺源</button></li>
+                </ul>
+                <input type="hidden"name='operateType1'>
+                <input type="hidden"name='other'> 
+            </form>
+
+        </div>
+
+    </div>
+</header>
+<div class="checkArea1 checkArea3"style="">
+   <div class='areatip'>请选择店铺位置</div>
+   <div>
+     <ul>
+     <li>宝安区</li>
+     <li>福田区</li>
+     <li>南山区</li>
+     <li>罗湖区</li>
+     <li>龙岗区</li>
+     <li>盐田区</li>
+     <li>龙华新区</li>
+     <li>光明新区</li>
+     <li>大鹏新区</li>
+      
+   </ul>
+   <div class='areatip areatip1'>
+     
+      <input type="text"placeholder="请输入您期望的其他开店区域"> 
+    
+     
+   </div>
+  </div>
+
+  <button class='canclebtn'>取消</button>
+     <button class='savebtn'>确定</button>
+
+ </div>
+ <!-- 经营类型 -->
+ <div class="checkArea1  checkArea2">
+    <div class='areatip'>请选择期望经营类型(可多选)</div>
+    <div>
+      <ul>
+      <li>餐饮类</li>
+      <li>娱乐类</li>
+      <li>培训类</li>
+      <li style="border-bottom:none">便利店</li>
+      <li style="border-bottom:none">理发店</li>
+      <li style="border-bottom:none">网吧</li>
+     </ul>
+      <div class='areatip areatip1'>
+     
+      <input type="text"placeholder="请输入您期望的其他经营类型"> 
+    
+     
+   </div>
+   </div>
+    <button class='canclebtn'>取消</button>
+     <button class='savebtn'>确定</button>
+  </div>
+
+</body>
+<!-- <script src='http://cdn.bootcss.com/zepto/1.1.6/zepto.min.js'></script> -->
+<script src='http://www.zanjiapuzi.com/js/jquery-3.0.0.min.js'></script>
+
+<script src='http://m.zanjiapuzi.com/js/homePage.js'></script>
+<script>
+
+    function query(){
+
+        var data1 = $("input[name='realName']").val();
+        data1 = $.trim(data1);
+
+        var reg =   /(^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$)|(^((\(\d{3}\))|(\d{3}\-))?(1[34578]\d{9})$)/;
+        var data2 = $("input[name='phoneNum']").val();
+        data2 = $.trim(data2);
+        var data3 = $("input[name='reasonable']").val();
+        data3 = $.trim(data3);
+
+        var data6 = $("#otherNeeds").val();
+        data6 = $.trim(data6);
+        if (data1.length < 1) {
+            Funtip('姓名不能为空');
+            event.preventDefault();
+            return;
+        }
+        if (data2.length < 1) {
+            Funtip('电话号码不能为空');
+            event.preventDefault();
+            return;
+        }
+        if (!reg.test(data2)){
+            Funtip('电话号码格式不对');
+            event.preventDefault();
+            return;
+        }
+        if (data3.length < 1) {
+            Funtip('店铺面积不能为空');
+            event.preventDefault();
+            return;
+        }
+
+        var shopsPosition = $("#shopsPosition").val();
+        var otherShopsPosition = $("#otherShopsPosition").val();
+        if(!$.trim(shopsPosition) && !$.trim(otherShopsPosition)){
+            Funtip('请选择店铺位置');
+            event.preventDefault();
+            return;
+        }
+
+        if(otherShopsPosition.length > 30){
+            Funtip('其他店铺位置不能多于30个字');
+            event.preventDefault();
+            return;
+        }
+
+        var operateType = $("#operateType").val();
+        var otherOperateType = $("#otherOperateType").val();
+        if(!$.trim(operateType) && !$.trim(otherOperateType)){
+            Funtip('请选择希望经营类型');
+            event.preventDefault();
+            return;
+        }
+
+        if(otherOperateType.length > 30){
+            Funtip('其他经营类型不能多于30个字');
+            event.preventDefault();
+            return;
+        }
+
+        if(data6.length < 1){
+            Funtip('其它需求不能为空');
+            event.preventDefault();
+            return;
+        }
+        var advSource = getQueryString("type");
+        if(advSource==""||advSource==null){
+            $("#advSource").val(7);
+        }else{
+            $("#advSource").val(advSource);
+        }
+
+        var param = encodeURI(encodeURI($("#save").serialize()));
+
+        $.ajax({
+            url:"http://zjpz-admin.zanjiapuzi.com/opportunityManage/saveShopsPut",
+            data: param,
+            processData: false,
+            dataType:"jsonp",
+            success:function(data){
+                alert(data.message);
+                if(data.code == 1){
+                    window.location.reload(); //刷新加载页面
+                }
+            },
+            error:function(){
+                alert("提交失败");
+            }
+        });
+    }
+
+    function getQueryString(key){
+        var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result?decodeURIComponent(result[2]):null;
+    }
+
+</script>

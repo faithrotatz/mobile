@@ -1,0 +1,265 @@
+.container{
+  width:320px;
+  padding:0;
+}
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+.header{
+
+
+ background-size: cover;
+ position:relative;
+ background-repeat:no-repeat;
+ background-position:center center;
+ background-color:#ffffff;
+}
+.container-fluid{
+  padding:0;
+}
+.topnav{
+  width:100%;
+  height:100px;
+
+
+
+}
+
+.mainbanner{
+  margin-top:100px;
+  width:320px;
+  height:155px;
+  background-image:url(../images/slogan.png);
+}
+.topnav ul li{
+  font-size: 15px;
+  color:#423f50;
+  float:right;
+  margin-right:30px;
+
+}
+.topnav ul li:last-child{
+  background-image: url(../images/phone.png);
+  background-repeat: no-repeat;
+  padding-left:30px;
+  background-position:0px 3px;
+}
+.topnav ul li:first-child{
+  margin-right:0;
+}
+.topnav ul{
+  overflow:hidden;
+  float: right;
+  margin-top:40px;
+}
+.topnav img{
+  float:left;
+  margin-top:10px;
+}
+.bannershade{
+  height:60px;
+  width:100%;
+ border-bottom: 1px solid #f6f6f6;
+
+}
+.bannerlogo{
+  width:320px;
+  height:60px;
+  margin:0 auto;
+  background-image: url(../img/img_03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:160px;
+}
+.mainnav li{
+  width:80px;
+  height:60px;
+  line-height:60px;
+  color:black;
+  float:left;
+  font-size:16px;
+  text-align:center;
+}
+.mainnav li:nth-child(2){
+  border-bottom:3px solid #d73240;
+}
+.mainnav li:hover{
+    border-bottom:3px solid #d73240;
+    cursor:pointer;
+}
+.content ul li{
+  width:80px;
+  height:140px;
+   float:left;
+  text-align:center;
+
+
+}
+.content>span{
+
+  display:block;
+  width:100%;height:40px;font-size:16px;line-height:30px;
+   text-align: center;
+   margin-bottom:20px;}
+   .content>span:after{
+     content:'';
+     width:44px;
+     height:5px;
+     background:#d83240;
+     display:block;
+     position: relative;
+     left:50%;
+     margin-left:-22px;
+  }
+
+.content ul li:first-child div{
+   background-image:url(../img/banner1.png);
+   background-repeat:no-repeat;
+   background-position:-240px -338px;
+}
+.content ul li:nth-child(2) div{
+   background-image:url(../img/banner2.png);
+   background-repeat:no-repeat;
+   background-position:center;
+}
+.content ul li:nth-child(3) div{
+   background-image:url(../img/banner3.png);
+   background-repeat:no-repeat;
+   /*background-position:-180px -180px;*/
+   background-size:cover;
+
+}
+.content ul li:nth-child(4) div{
+   background-image:url(../img/banner4.png);
+   background-repeat:no-repeat;
+   background-size:cover;
+
+}
+
+.content ul li div{
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  border:6px solid #d73240;
+
+  text-align:center;
+
+}
+.content li span{
+  display:block;
+  width: 80px;
+  line-height:30px;
+  font-size:13px;
+  color:#272634;
+  margin-top:13px;
+}
+.content{
+
+  padding:0;
+  padding-top:20px;
+}
+.content>div{
+  width:100%;
+  height:60px;
+
+  font-size:16px;
+}
+.content>div>mark{
+  font-size:22px;
+  color:#d73041;
+  background:none;
+  font-weight:500;
+  display:block;
+}
+.content ul{
+
+}
+.content>p{
+  width:100%;
+
+  line-height:60px;
+  font-size:20px;
+  color:#d83240;
+  text-align: center;
+}
+.advantage{
+   width:100%;
+    padding-bottom:30px;
+    padding-top:45px;
+    background-position: -600px;
+    background-image:url(../images/bg3.png);
+    background-size:cover;}
+.ad-content{
+
+}
+.ad-content ul{
+  float:left;
+}
+.ad-content>p:first-child{
+  font-size:20px;
+  line-height:40px;
+  margin-bottom:30px;
+
+}
+
+.ad-content>p:first-child:after{
+    display:block;
+    content:'';
+    width:44px;
+    height:5px;
+    background:#d73242;
+}
+.ad-content>div{
+  width:320px;
+
+  height:60px;
+  font-size:16px;
+  color:#d83341;
+}
+.ad-content ul li{
+  width:70px;
+  margin-bottom:15px;
+}
+.ad-content ul li span:first-child{
+  display:inline-block;
+   width:8px;
+   height:8px;
+   border-radius:50%;
+   background:#d73242;
+   margin-right:6px;
+}
+.ad-content ul li span:last-child{
+  display:inline-block;
+  font-size:12px;
+  color:#27253b;
+}
+.ad-content>span{
+  display: inline-block;
+  font-size:20px;
+  color:#d83240;
+}
+
+footer{
+  height:140px;
+  background:#d73240;
+  padding-top:20px;
+}
+footer .container{
+   height:100%;
+}
+
+
+.footer p{
+  color:white;
+  font-size:16px;
+}
+.footer p:first-child {
+  margin-bottom:20px;
+}
+
+.footer ul li p:last-child{
+  font-size:12px;
+}
