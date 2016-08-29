@@ -16,6 +16,7 @@ ul{
   background-repeat:no-repeat;
   background-color:#ffffff;
   background-position:0px 40px;
+  background-attachment: fixed;
 }
 .container-fluid{
   padding:0;
