@@ -1,6 +1,6 @@
 $(function(){
 var h=document.documentElement.clientHeight+'px';
-  $('.header').height(h)
+  $('.header').css('min-height',h)
 
   //  投放铺源
 
@@ -34,28 +34,28 @@ var h=document.documentElement.clientHeight+'px';
         if($(this).hasClass('savebtn')){
           if(CheckList.getInput('.checkArea2')){
             if(CheckList.getList('.checkArea2')){
-          $('#manage,.addinput').val(CheckList.getList('.checkArea2')+','+CheckList.getInput('.checkArea2'))//类型保存   
+          $('#manage,.addinput').val(CheckList.getList('.checkArea2')+','+CheckList.getInput('.checkArea2'))//类型保存
            }else{
-          $('#manage,.addinput').val(CheckList.getInput('.checkArea2'))//类型保存   
+          $('#manage,.addinput').val(CheckList.getInput('.checkArea2'))//类型保存
 
            }
         }else{
-          $('#manage,.addinput').val(CheckList.getList('.checkArea2'))//类型保存 
+          $('#manage,.addinput').val(CheckList.getList('.checkArea2'))//类型保存
         }
-          // $('#manage,#addinput').val(CheckList.getList('.checkArea2')+','+CheckList.getInput('.checkArea2'))//类型保存 
+          // $('#manage,#addinput').val(CheckList.getList('.checkArea2')+','+CheckList.getInput('.checkArea2'))//类型保存
           $('input[name="expectArea"]').val(CheckList.getList('.checkArea2'))//保存多选的类型 委托找铺
           $('input[name="otherExpectArea"]').val(CheckList.getInput('.checkArea2'))//保存填写的值 委托找铺
           $('input[name="operateType"]').val(CheckList.getList('.checkArea2'))//保存多选的类型 委托找铺
           $('input[name="otherOperateType"]').val(CheckList.getInput('.checkArea2'))
         }
-       
+
         $('.bodyshade').remove();
         $('.checkArea1').hide();
     })
     $('.checkArea3 button').click(function(){
 
        if($(this).hasClass('savebtn')){
-         
+
           if(CheckList.getInput('.checkArea3')){
             if(CheckList.getList('.checkArea3')){
                $('#addinput').val(CheckList.getList('.checkArea3')+','+CheckList.getInput('.checkArea3'))//类型保存
@@ -63,24 +63,24 @@ var h=document.documentElement.clientHeight+'px';
                $('#addinput').val(CheckList.getInput('.checkArea3'))//类型保存
 
              }
-          
+
 
         }else{
-           
-          $('#addinput').val(CheckList.getList('.checkArea3'))//类型保存 
+
+          $('#addinput').val(CheckList.getList('.checkArea3'))//类型保存
 
         }
-          // $('#addinput').val(CheckList.getList('.checkArea3')+','+CheckList.getInput('.checkArea3'))//类型保存 
+          // $('#addinput').val(CheckList.getList('.checkArea3')+','+CheckList.getInput('.checkArea3'))//类型保存
           $('input[name="shopsPosition"]').val(CheckList.getList('.checkArea3'))
           $('input[name="otherShopsPosition"]').val(CheckList.getInput('.checkArea3'))
         }
-       
+
         $('.bodyshade').remove();
         $('.checkArea1').hide();
     })
 
     // 弹窗
-    var CheckList={    
+    var CheckList={
     getList:function(ele){  //获得多选选项
         var $ele=$(ele);
         var arr=[];
@@ -90,14 +90,14 @@ var h=document.documentElement.clientHeight+'px';
           }
         })
         // arr.push($ele.find('input').val())
-        return arr.join(',') 
+        return arr.join(',')
       },
     getInput:function(ele){
       return $(ele).find('input').val();//其他选项框的值
      }
       };
-    
-       
+
+
 
 
 })
