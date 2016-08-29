@@ -444,11 +444,12 @@ footer .container{
 }
 .customerphone{
 
-  line-height:40px;
-  font-size: 13px;
-  padding-left: 8px;
-  display:inline;
-
+  width: 200px;
+  height: 30px;
+  background-image:url(../kehuphone.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -3px -5px;
 }
 .checkArea1 .savebtn{
   border-left: 1px solid #bbbbbb;
